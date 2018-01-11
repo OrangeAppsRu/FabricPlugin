@@ -22,6 +22,12 @@ module.exports = {
             "}",
             "",
             "apply plugin: 'io.fabric'",
+            "crashlytics {",
+            "    enableNdk true",
+            "    androidNdkOut 'libs/debug'",
+            "    androidNdkLibsOut 'libs/release'",
+            "    manifestPath 'AndroidManifest.xml'",
+            "}",
             "// Fabric Cordova Plugin - End Fabric Build Tools",
         ].join("\n");
 

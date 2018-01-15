@@ -58,6 +58,8 @@ public class FabricPlugin extends CordovaPlugin {
 			sendCrash(data, callbackContext);
 		} else if (action.equals("sendNonFatalCrash")) {
 			sendNonFatalCrash(data, callbackContext);
+        } else if (action.equals("sendNdkCrash")) {
+            sendNdkCrash(data, callbackContext);
 		} else if (action.equals("setUserIdentifier")) {
 			setUserIdentifier(data, callbackContext);
 		} else if (action.equals("setUserName")) {
@@ -158,6 +160,11 @@ public class FabricPlugin extends CordovaPlugin {
 			}
 		});
 	}
+
+    private void sendNdkCrash(final JSONArray data,
+                              final CallbackContext callbackContext) {
+        //CrashlyticsNdk.getInstance().crash();
+    }
 
 	private void setUserIdentifier(final JSONArray data,
 								   final CallbackContext callbackContext) {
